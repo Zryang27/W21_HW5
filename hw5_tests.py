@@ -142,10 +142,10 @@ class TestCard(unittest.TestCase):
         self.assertEqual(len(c_test_q6_1.cards), 52)
         c_test_q6_1.deal_card()
         self.assertEqual(len(c_test_q6_1.cards), 51)
+        X = len(c_test_q6_1.cards)
+        Y = 51
         c_test_q6_1.deal_card()
         self.assertEqual(len(c_test_q6_1.cards), 50)
-        X = len(c_test_q6_1.cards)
-        Y = 50
         return X, Y    
     
 
@@ -166,17 +166,18 @@ class TestCard(unittest.TestCase):
         self.assertEqual(len(c_test_q7_1.cards), 52)
         card0 = c_test_q7_1.deal_card()
         self.assertEqual(len(c_test_q7_1.cards), 51)
+        X = len(c_test_q7_1.cards)+1
         c_test_q7_1.replace_card(card0)
         self.assertEqual(len(c_test_q7_1.cards), 52)
+        Y = len(c_test_q7_1.cards)
+        Z = 52
         card1 = c_test_q7_1.deal_card()
         card2 = c_test_q7_1.deal_card()
         self.assertEqual(len(c_test_q7_1.cards), 50)
         c_test_q7_1.replace_card(card1)
         c_test_q7_1.replace_card(card2)
         self.assertEqual(len(c_test_q7_1.cards), 52)
-        X = len(c_test_q7_1.cards)
-        Y = 52
-        return X, Y
+        return X, Y, Z
     
     def test_q8(self):
         '''
@@ -193,13 +194,11 @@ class TestCard(unittest.TestCase):
         '''
         c_test_q8_1 = hw5_cards.Deck()
         self.assertEqual(len(c_test_q8_1.cards), 52)
-        c_test_q8_1.deal_card()
-        self.assertEqual(len(c_test_q8_1.cards), 51)
         card1 = hw5_cards.Card(0,1)
         c_test_q8_1.replace_card(card1)
-        self.assertEqual(len(c_test_q8_1.cards), 51)
+        self.assertEqual(len(c_test_q8_1.cards), 52)
         X = len(c_test_q8_1.cards)
-        Y = 51
+        Y = 52
         return X, Y  
 
 

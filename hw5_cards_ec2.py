@@ -146,7 +146,8 @@ class Deck:
         all of the cards should be dealt, even if this 
         results in an uneven number of cards per hand.
         Default value of number of cards per hand is 
-        set to -1. The function returns list of Hands
+        set to -1. It deal all the cards to players.
+        The function returns list of Hands.
 
         Parameters  
         -------------------
@@ -237,7 +238,6 @@ class Hand:
         if card.__str__() not in card_strs: # if the string representing this card is not in the list already
             self.init_cards.append(card) # append it to the list
         return None
-
 
     def remove_card(self, card):
         '''remove a card from the hand

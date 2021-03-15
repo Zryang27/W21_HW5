@@ -140,6 +140,8 @@ class Deck:
         '''return a list consist of #num_hand of Hands
         with #num_cards Cards
 
+        Assume the input is valid. num_hand * num_cards
+        is less than total number of card in deck.
         deal the card to #num_hand Hands. Each hand has
         #num_cards Cards.
         If the number of cards per hand is set to -1,
